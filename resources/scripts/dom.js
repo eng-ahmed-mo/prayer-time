@@ -48,6 +48,10 @@ if ("geolocation" in navigator) {
                 })
                 .catch((error) => {
                     console.log(error);
+                })
+                .finally(() => {
+                    document.querySelector('.loading').style.opacity = "0";
+                    document.querySelector('.loading').style.pointerEvents = "none";
                 });
 
         },

@@ -14,7 +14,7 @@ const parseTime = (time) => time.split(':').map(Number);
 const UItime = (time, array) => {
     let [h, m, s] = time;
     let period = h >= 12 ? "PM" : "AM";
-    h = h % 12 || 12;
+    h = h > 12 ? h - 12 : h;
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
@@ -29,15 +29,13 @@ const UItime = (time, array) => {
             return `${h}:${m}:${s} ${period}`;
         }
     }
-
-
-
 }
 
 const toTime = (seconds) => {
     let h = Math.floor(seconds / 3600);
     let m = Math.floor((seconds % 3600) / 60);
     let s = seconds % 60;
+    
     return [h, m, s];
 }
 
@@ -80,33 +78,32 @@ const nextPrayerTime = (next) => {
     return toTime(diff);
 };
 
-
 let latitude = 0;
 let longitude = 0;
 
 function getCurrentLocation() {
-  return new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => resolve(position),
-      (error) => reject(error)
-    );
-  });
+    return new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(
+            (position) => resolve(position),
+            (error) => reject(error)
+        );
+    });
 }
 
 (async function GPS() {
-  try {
-    const position = await getCurrentLocation();
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
+    try {
+        const position = await getCurrentLocation();
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
 
-  } catch (error) {
-    console.error("error", error.message);
-  }
+    } catch (error) {
+        console.error("error", error.message);
+    }
 })();
 
 async function main() {
-  await GPS(); // دلوقتي نضمن إن GPS خلصت
-  console.log(latitude, longitude); // ✅ صح
+    await GPS();
+    console.log(latitude, longitude);
 };
 
 

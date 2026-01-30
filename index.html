@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prayer time</title>
-    <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/G5dDSh6HtRrOaqAzdrz5EprEwuQpONujqj0N1361n3ltjmCPvD6Kx5lcMLFgkY8KGA">
+    <link rel="icon" type="image/png"
+        href="https://play-lh.googleusercontent.com/G5dDSh6HtRrOaqAzdrz5EprEwuQpONujqj0N1361n3ltjmCPvD6Kx5lcMLFgkY8KGA">
     <link rel="stylesheet" href="./resources/styles/style.css">
     <script src="./node_modules/axios/dist/axios.js"></script>
 </head>
@@ -16,59 +17,71 @@
         <h1>مواقيت الصلاة</h1>
     </header>
 
+    <main>
+        <section class="container-left">
+            <div class="prayer-time fajr">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">الفجْر</div>
+            </div>
+            <div class="prayer-time sunrise">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">الشروق</div>
+            </div>
+            <div class="prayer-time dhuhr">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">الظهر</div>
+            </div>
+            <div class="prayer-time asr">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">العصر</div>
+            </div>
+            <div class="prayer-time maghrib">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">المغرب</div>
+            </div>
+            <div class="prayer-time isha">
+                <div class="prayer-time-time">00:00</div>
+                <div class="prayer-time-title">العشاء</div>
+            </div>
+        </section>
 
-    <section class="container-left">
-        <div class="prayer-time fajr">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">الفجْر</div>
-        </div>
-        <div class="prayer-time sunrise">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">الشروق</div>
-        </div>
-        <div class="prayer-time dhuhr">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">الظهر</div>
-        </div>
-        <div class="prayer-time asr">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">العصر</div>
-        </div>
-        <div class="prayer-time maghrib">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">المغرب</div>
-        </div>
-        <div class="prayer-time isha">
-            <div class="prayer-time-time">00:00</div>
-            <div class="prayer-time-title">العشاء</div>
-        </div>
-    </section>
+        <section class="container-right">
+            <div class="date-time">
+                <div class="time">12:45:52</div>
+                <div class="date">السبت 24 يناير 2026</div>
+            </div>
 
-    <section class="container-right">
-        <div class="date-time">
-            <div class="time">12:45:52</div>
-            <div class="date">السبت 24 يناير 2026</div>
-        </div>
+            <div class="city">
+                <h3>المدينة </h3>
+                <h2>القاهرة</h2>
 
-        <div class="city">
-            <h3>المدينة </h3>
-            <h2>القاهرة</h2>
+            </div>
 
-        </div>
+            <div class="next-prayer">
+                <div class="next-prayer-title">الصلاة القادمة</div>
+                <div class="next-prayer-time-title">الفجْر</div>
 
-        <div class="next-prayer">
-            <div class="next-prayer-title">الصلاة القادمة</div>
-            <div class="next-prayer-time-title">الفجْر</div>
-
-            <div class="next-prayer-time">
-                <div class="next-prayer-time-time">
-                    <div class="hours">05</div>
-                    <div class="minutes">45</div>
-                    <div class="seconds">00</div>
+                <div class="next-prayer-time">
+                    <div class="next-prayer-time-time">
+                        <div class="hours">05</div>
+                        <div class="minutes">45</div>
+                        <div class="seconds">00</div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>اللَّهُــمَّ صَلِّ وَسَـــلِّمْ وَبَارِكْ على نَبِيِّنَـــا مُحمَّد</p>
+        <p class="copy">جميع الحقوق محفوظة © 2026 <a href="">Eng.Ahmed Mohamed</a></p>
+    </footer>
+
+    <div class="loading">
+        <div class="loading-content">
+            <p>جاري التحميل...</p>
         </div>
-    </section>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
