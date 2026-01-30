@@ -212,23 +212,23 @@ footer {
     bottom: 0;
     /* background-color: #e2e2e2; */
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     padding: 20px;
     color: #585858;
 
     .copy {
         margin-top: 1.5rem;
-        font-size: 18px;
-    }
+        font-size: 16px;
 
-    a {
-        text-decoration: none;
-        color: #1b1b1b;
-        transition: all .3s ease;
+        a {
+            text-decoration: none;
+            color: #1b1b1b;
+            transition: all .3s ease;
 
-        &:hover {
-            color: #000;
-            text-decoration: underline;
+            &:hover {
+                color: #000;
+                text-decoration: underline;
+            }
         }
     }
 }
